@@ -11,11 +11,12 @@ cp assets/style.css site
 echo > .temp
 
 for filename in $(ls ./posts | sort -r); do
-    newpath="/blog/`basename $filename .md`.html"
+    newpath="/blog/`basename $filename .md`"
     title=`grep title: posts/$filename | cut -c 7- | xargs`
     date=`grep date: posts/$filename | cut -c 6- | xargs`
-    echo "- [$date - $title]($newpath)" >> .temp
-    pandoc -s --template assets/template.html posts/$filename -o ./site$newpath
+    echo "- [$date - $title]($newpath/)" >> .temp
+    mkdir site$newpath
+    pandoc -s --template assets/template.html posts/$filename -o ./site$newpath/index.html
 done
 
 cat home.md .temp | pandoc -s --quiet --template assets/template.html -o site/index.html
