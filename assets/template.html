@@ -1,0 +1,31 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>webshite</title>
+<meta name="description" content="WEBSITE DESCRIPTION">
+<meta name="author" content="WEBSITE AUTHOR">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header>
+<p><a href="/index.html">webshite</a></p>
+</header>
+<article>
+$if(title)$
+<h1 class="title">$title$</h1>
+$endif$
+$if(date)$
+<p><i>$date$</i></p>
+$endif$
+$body$
+$if(title)$
+<footer>
+<p>This is where a footer would go.</p>
+</footer>
+$endif$
+</article>
+</body>
+</html>
