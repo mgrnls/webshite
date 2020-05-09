@@ -15,3 +15,4 @@ to build the site.
 - No support for images (yet). I'll add them if I need them.
 - Blog post list gets added to the bottom of `home.md`.
 - Might add RSS in future.
+- Might add support for other pages (about, contact, etc.).
