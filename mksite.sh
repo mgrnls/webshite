@@ -12,8 +12,8 @@ echo > .temp
 
 for filename in $(ls ./posts | sort -r); do
     newpath="/blog/`basename $filename .md`"
-    title=`grep title: posts/$filename | cut -c 7- | xargs`
-    date=`grep date: posts/$filename | cut -c 6- | xargs`
+    title=`grep ^title: posts/$filename | cut -c 7- | xargs`
+    date=`grep ^date: posts/$filename | cut -c 6- | xargs`
     echo "- [$date - $title]($newpath/)" >> .temp
     mkdir site$newpath
     pandoc -s --template assets/template.html posts/$filename -o ./site$newpath/index.html
