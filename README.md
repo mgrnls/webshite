@@ -11,6 +11,7 @@ Place blog posts in `posts/`, edit template and style in `assests/`, and write h
 to build the site.
 
 ## Notes
+- Requires you to have a `style.css` and `template.html` in `assets/`.
 - Requires a copy of pandoc on your machine.
 - No support for images (yet). I'll add them if I need them.
 - Blog post list gets added to the bottom of `home.md`.
