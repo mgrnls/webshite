@@ -14,7 +14,7 @@ for filename in $(ls ./posts | sort -r); do
     newpath="/blog/`basename $filename .md`"
     title=`grep ^title: posts/$filename | head -n 1 | cut -c 7- | xargs`
     date=`grep ^date: posts/$filename | head -n 1 | cut -c 6- | xargs`
-    echo "- [$date - $title]($newpath/)" >> .temp
+    echo "- $date - [$title]($newpath/)" >> .temp
     mkdir -p site$newpath
     pandoc -s --template assets/template.html posts/$filename -o ./site$newpath/index.html
 done
