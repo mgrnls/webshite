@@ -8,7 +8,13 @@ Place blog posts in `posts/`, edit template and style in `assests/`, and write h
 . mksite.sh
 ```
 
-to build the site.
+to build the site. To serve the site locally, run
+
+```
+python3 -m http.server -d site
+```
+
+and then go to `localhost:8000` in your web browser.
 
 ## Notes
 - Requires you to have a `style.css` and `template.html` in `assets/`.
