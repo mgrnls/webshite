@@ -1,6 +1,5 @@
 ---
 title: An example post
-date: 1 January 2020
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Magna fringilla urna porttitor rhoncus. Fermentum iaculis eu non diam phasellus vestibulum lorem sed risus. Sed cras ornare arcu dui vivamus. Accumsan in nisl nisi scelerisque eu ultrices vitae. Ipsum dolor sit amet consectetur adipiscing elit. Tellus in hac habitasse platea. Morbi tincidunt augue interdum velit euismod in pellentesque. Arcu bibendum at varius vel pharetra. Eget felis eget nunc lobortis mattis aliquam faucibus. Neque convallis a cras semper auctor neque vitae. Viverra justo nec ultrices dui sapien.

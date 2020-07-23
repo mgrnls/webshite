@@ -13,10 +13,11 @@ echo > .temp
 for filename in $(ls ./posts | sort -r); do
     newpath="/blog/`basename $filename .md`"
     title=`grep ^title: posts/$filename | head -n 1 | cut -c 7- | xargs`
-    date=`grep ^date: posts/$filename | head -n 1 | cut -c 6- | xargs`
+    date=`echo $filename | cut -c 1-10 | tr "-" " "`
+    date=`date -j -f "%Y %m %d" "$date" +"%-d %B %Y"`
     echo "- $date - [$title]($newpath/)" >> .temp
     mkdir -p site$newpath
-    pandoc -s --template assets/template.html posts/$filename -o ./site$newpath/index.html
+    pandoc --metadata=date:"$date" -s --template assets/template.html posts/$filename -o ./site$newpath/index.html
 done
 
 cat home.md .temp | pandoc -s --quiet --template assets/template.html -o site/index.html

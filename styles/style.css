@@ -11,8 +11,11 @@ body {
     max-width: 35em;
     margin: 0 auto;
     padding: 0 1em;
-    font-family: monospace;
-    line-height: 1.5;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    border-bottom: 0.08em solid black;
 }
 
 footer {
@@ -24,17 +27,17 @@ pre {
 }
 
 pre, blockquote {
-    padding-left: 3em;
+    border-left: 0.2em solid black;
+    padding-left: 1em;
     margin: 0;
 }
 
 .title {
-    text-transform: uppercase;
+    font-size: 1.9em;
 }
 
 h1 {
     font-size: 1.2em;
-    border-bottom: 0.08em solid black;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -47,7 +50,7 @@ h1 {
         color: #6bf;
     }
 
-    h1 {
+    header {
         border-bottom: 0.08em solid white;
     }
 
